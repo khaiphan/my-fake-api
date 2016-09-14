@@ -1,0 +1,1 @@
+define({  "name": "my-fake-api",  "version": "0.0.1",  "description": "Fake API server can be used for any purpose",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2016-09-14T10:49:48.246Z",    "url": "http://apidocjs.com",    "version": "0.16.1"  }});
