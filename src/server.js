@@ -58,6 +58,9 @@ const generateToken = (user) => {
 app.use(express.static(`${__dirname}/../apidoc`));
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/json'}));
 app.set('port', (process.env.PORT || 4000));
 
 app.get('/', (req, res) => {
@@ -156,3 +159,5 @@ app.post('/users', (req, res) => {
 app.listen(app.get('port'), () => {
   console.log('Example app listening on port 4000!');
 });
+
+module.exports = app;

@@ -10,4 +10,5 @@ try {
   console.error(err);
 }
 require('babel-register')(config);
-require('./server');
+
+module.exports = require('./server');
