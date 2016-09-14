@@ -57,6 +57,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 4000));
 
+app.get('/', (req, res) => {
+  res.send('Holla !');
+});
+
 app.get('/users', (req, res) => {
   const data = users.value();
   res.json(data);
