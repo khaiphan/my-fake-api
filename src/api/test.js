@@ -48,6 +48,10 @@ router.post('/', (req, res) => {
   res.status(200).send(test.find({id}).value());
 });
 
+router.get('/error', (req, res) => {
+  res.status(400).send('Error');
+});
+
 router.get('/clear', (req, res) => {
   const data = test
   .remove()
