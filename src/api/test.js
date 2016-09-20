@@ -52,6 +52,10 @@ router.get('/error', (req, res) => {
   res.status(400).send('Error');
 });
 
+router.post('/error', (req, res) => {
+  res.status(400).send('Error');
+});
+
 router.get('/clear', (req, res) => {
   const data = test
   .remove()
