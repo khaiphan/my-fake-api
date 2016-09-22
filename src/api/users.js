@@ -14,7 +14,7 @@ const generateToken = (user) => {
 };
 
 /**
- * @apiDefine UserSucess
+ * @apiDefine User
  * @apiSuccess {Bool} active State of the User.
  * @apiSuccess {String} role Role of the User.
  * @apiSuccess {String} firstname Firstname of the User.

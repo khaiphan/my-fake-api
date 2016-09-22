@@ -9,21 +9,12 @@ const db = low('./data/db.json', {
 
 db.defaults({users: []}).value();
 db.defaults({test: []}).value();
+db.defaults({houses: []}).value();
 
 const users = db.get('users');
+const houses = db.get('houses');
 
 if (!users.find().value()) {
-  users.push({
-    id: uuid(),
-    active: true,
-    role: 'admin',
-    firstname: 'Khai',
-    lastname: 'Phan',
-    email: 'khai@8bit.com',
-    password: 123456,
-    website: 'http://8bitrockr.com/',
-    created: Date.now()
-  }).value();
   // Create 1000 users
   for (let i = 0; i < 1000; i++) {
     users.push({
@@ -35,6 +26,18 @@ if (!users.find().value()) {
       email: chance.email(),
       password: chance.string({length: 12}),
       website: chance.url({path: ''}),
+      created: Date.now(),
+    }).value();
+  }
+}
+
+if (!houses.find().value()) {
+  // Create 1000 houses
+  for (let i = 0; i < 1000; i++) {
+    houses.push({
+      id: uuid(),
+      name: '',
+      location: '',
       created: Date.now(),
     }).value();
   }

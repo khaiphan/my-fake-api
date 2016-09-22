@@ -48,6 +48,71 @@ router.post('/', (req, res) => {
   res.status(200).send(test.find({id}).value());
 });
 
+router.get('/currencies', (req, res) => {
+  const currencies = [{
+    name: 'USD',
+    symbol: '$',
+    base: true,
+    rate: 1,
+    displayOption: {
+      decimal: '.',
+      thousand: ',',
+      precision: 2,
+      format: {
+        pos: '%s %v',
+        neg: '%s (%v)',
+        zero: '%s  --'
+      }
+    }
+  }, {
+    name: 'EUR',
+    symbol: '€',
+    base: false,
+    rate: 0.745101,
+    displayOption: {
+      decimal: '.',
+      thousand: ',',
+      precision: 2,
+      format: {
+        pos: '%s %v',
+        neg: '%s (%v)',
+        zero: '%s  --'
+      }
+    }
+  }, {
+    name: 'HKD',
+    symbol: '$',
+    base: false,
+    rate: 7.781919,
+    displayOption: {
+      decimal: '.',
+      thousand: ',',
+      precision: 2,
+      format: {
+        pos: '%s %v',
+        neg: '%s (%v)',
+        zero: '%s  --'
+      }
+    }
+  }, {
+    name: 'GBP',
+    symbol: '£',
+    base: false,
+    rate: 0.647710,
+    displayOption: {
+      decimal: '.',
+      thousand: ',',
+      precision: 2,
+      format: {
+        pos: '%s %v',
+        neg: '%s (%v)',
+        zero: '%s  --'
+      }
+    }
+  }];
+  res.status(200).send(currencies);
+});
+
 router.get('/error', (req, res) => {
   res.status(400).send('Error');
 });
