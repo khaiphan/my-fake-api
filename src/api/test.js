@@ -53,22 +53,22 @@ router.get('/currencies', (req, res) => {
     name: 'USD',
     symbol: '$',
     base: true,
-    rate: 1,
+    // rate: 1,
   }, {
     name: 'EUR',
     symbol: '€',
     base: false,
-    rate: 0.745101,
+    // rate: 0.745101,
   }, {
     name: 'HKD',
     symbol: '$',
     base: false,
-    rate: 7.781919,
+    // rate: 7.781919,
   }, {
     name: 'GBP',
     symbol: '£',
     base: false,
-    rate: 0.647710,
+    // rate: 0.647710,
   }];
   res.status(200).send(currencies);
 });
