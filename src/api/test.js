@@ -86,7 +86,7 @@ router.get('/amenities', (req, res) => {
 });
 
 router.get('/properties', (req, res) => {
-  const properties = {
+  const properties = [{
     "houseId": "HOPTWXY7WM9",
     "name": "Goldner Trafficway",
     "description": "Quia amet doloremque id corrupti. Ut id quod at quo aut explicabo tempora. Aliquid quidem facere nihil eius sunt ut esse optio. Rerum ipsam eaque impedit dolore.",
@@ -705,7 +705,7 @@ router.get('/properties', (req, res) => {
     "guest_number": 72,
     "distance": 76,
     "price_per_night": 118.7
-  };
+  }];
   res.status(200).send(properties);
 });
 
