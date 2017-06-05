@@ -48,6 +48,10 @@ router.post('/', (req, res) => {
   res.status(200).send(test.find({id}).value());
 });
 
+router.get('/transactions', (req, res) => {
+  res.status(200).send(require('../../data/transactions.json'));
+});
+
 router.get('/currencies', (req, res) => {
   const currencies = [{
     name: 'USD',
