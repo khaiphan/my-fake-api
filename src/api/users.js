@@ -90,8 +90,11 @@ router.post('/', (req, res) => {
     delete returnData.password;
     if (data.password.toString() === req.body.password.toString()) {
       res.json({
-        user: returnData,
-        token: generateToken(returnData),
+        ok: true,
+        data: {
+          user: returnData,
+          token: generateToken(returnData),
+        }
       });
     }
   } else {
